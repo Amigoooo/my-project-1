@@ -2,17 +2,17 @@
   "generated_at": "2026-06-12T10:00:00+08:00",
   "market_date": "2026-06-11",
   "indices": {
-    "sp500": { "label": "sp500", "price": "7394.30", "change_pct": "+1.75%" },
-    "dow": { "label": "dow", "price": "50848.75", "change_pct": "+1.86%" },
-    "nasdaq": { "label": "nasdaq", "price": "25809.66", "change_pct": "+2.54%" },
-    "vix": { "label": "vix", "price": "19.44", "change_pct": "-12.51%" },
-    "tnx": { "label": "tnx", "price": "4.45", "change_pct": "-2.0bp" },
-    "dxy": { "label": "dxy", "price": "99.83", "change_pct": "-0.03%" }
+    "sp500": { "label": "S&P 500", "price": "7394.30", "change_pct": "+1.75%" },
+    "dow": { "label": "道琼斯", "price": "50848.75", "change_pct": "+1.86%" },
+    "nasdaq": { "label": "纳斯达克", "price": "25809.66", "change_pct": "+2.54%" },
+    "vix": { "label": "VIX", "price": "19.44", "change_pct": "-12.51%" },
+    "tnx": { "label": "10Y收益率", "price": "4.45", "change_pct": "" },
+    "dxy": { "label": "DXY美元", "price": "99.83", "change_pct": "-0.03%" }
   },
   "commodities": {
-    "wti": { "label": "wti", "price": "86.79", "change_pct": "-2.06%" },
-    "gold": { "label": "gold", "price": "4235.40", "change_pct": "+2.95%" },
-    "btc": { "label": "btc", "price": "63616", "change_pct": "+3.53%" }
+    "wti": { "label": "WTI原油", "price": "86.79", "change_pct": "-2.06%" },
+    "gold": { "label": "黄金", "price": "4235.40", "change_pct": "+2.95%" },
+    "btc": { "label": "比特币", "price": "63616", "change_pct": "+3.53%" }
   },
   "macro": {
     "hy_oas": { "value": "2.80", "date": "2026-06-10" },
@@ -37,5 +37,11 @@
     "10 Yr": "4.45",
     "20 Yr": "4.65",
     "30 Yr": "4.72"
-  }
+  },
+  "signals": [
+    { "signal": "VIX恐慌指数", "reading": "19.44", "meaning": "盘中22.59→收盘19.44，恐慌缓解但仍在风险区间", "status": "warning" },
+    { "signal": "高收益债OAS", "reading": "2.80%", "meaning": "信用利差走扩，风险偏好未全面恢复", "status": "warning" },
+    { "signal": "股债相关性", "reading": "同涨", "meaning": "事件驱动反弹，非基本面改善", "status": "info" },
+    { "signal": "SOFR-IORB利差", "reading": "-5bp", "meaning": "融资市场正常", "status": "ok" }
+  ]
 }
