@@ -17,13 +17,13 @@
   "macro": {
     "hy_oas": { "value": "2.80", "date": "2026-06-10" },
     "vixcls": { "value": "19.44", "date": "2026-06-11" },
-    "sofr": { "value": "4.40", "date": "2026-06-11" },
-    "iorb": { "value": "4.45", "date": "2026-06-11" }
+    "sofr": { "value": "3.59", "date": "2026-06-10" },
+    "iorb": { "value": "3.65", "date": "2026-06-11" }
   },
   "fed": {
-    "rrp": { "value": "0.46", "date": "2026-06-11" },
-    "tga": { "value": "828.1", "date": "2026-06-11" },
-    "reserves": { "value": "3300", "date": "2026-06-11" }
+    "rrp": { "value": "0.001", "date": "2026-06-11", "note": "已基本归零" },
+    "tga": { "value": "828", "date": "2026-06-10" },
+    "reserves": { "value": "3081", "date": "2026-06-10" }
   },
   "yields": {
     "Date": "2026-06-11",
@@ -42,6 +42,6 @@
     { "signal": "VIX恐慌指数", "reading": "19.44", "meaning": "盘中22.59→收盘19.44，恐慌缓解但仍在风险区间", "status": "warning" },
     { "signal": "高收益债OAS", "reading": "2.80%", "meaning": "信用利差走扩，风险偏好未全面恢复", "status": "warning" },
     { "signal": "股债相关性", "reading": "同涨", "meaning": "事件驱动反弹，非基本面改善", "status": "info" },
-    { "signal": "SOFR-IORB利差", "reading": "-5bp", "meaning": "融资市场正常", "status": "ok" }
+    { "signal": "SOFR-IORB利差", "reading": "-6bp", "meaning": "融资格局正常（SOFR 3.59%, IORB 3.65%）", "status": "ok" }
   ]
 }
