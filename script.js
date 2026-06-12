@@ -73,9 +73,9 @@ function renderLiquidity(data) {
   const grid = document.getElementById('liquidity-grid');
   const fed = data?.fed || {};
   let html = '';
-  if (fed.tga) html += renderCard('TGA 余额', fed.tga.value ? `$${fmt(fed.tga.value/1e9, 0)}亿` : null, null, 'Fed H.4.1', { sub: fed.tga.date });
-  if (fed.rrp) html += renderCard('RRP 余额', fed.rrp.value ? `$${fmt(fed.rrp.value/1e9, 0)}亿` : null, null, 'Fed H.4.1', { sub: fed.rrp.date });
-  if (fed.reserves) html += renderCard('银行准备金', fed.reserves.value ? `$${fmt(fed.reserves.value/1e9, 0)}亿` : null, null, 'Fed H.4.1', { sub: fed.reserves.date });
+  if (fed.tga) html += renderCard('TGA 余额', fed.tga.value ? `$${fmt(fed.tga.value, 0)}B` : null, null, 'Fed H.4.1', { sub: fed.tga.date });
+  if (fed.rrp) html += renderCard('RRP 余额', fed.rrp.value ? `$${fmt(fed.rrp.value, 1)}B` : null, null, 'Fed H.4.1', { sub: fed.rrp.date });
+  if (fed.reserves) html += renderCard('银行准备金', fed.reserves.value ? `$${fmt(fed.reserves.value, 0)}B` : null, null, 'Fed H.4.1', { sub: fed.reserves.date });
 
   const mac = data?.macro || {};
   if (mac.sofr) html += renderCard('SOFR', `${mac.sofr.value}%`, null, 'FRED', { sub: mac.sofr.date });
@@ -180,9 +180,9 @@ function renderSources(data) {
     { indicator: '黄金', value: data?.commodities?.gold?.price || '—', date: '—', source: 'Yahoo Finance', status: '✅' },
     { indicator: '比特币', value: data?.commodities?.btc?.price || '—', date: '—', source: 'Yahoo Finance', status: '✅' },
     { indicator: '高收益债 OAS', value: data?.macro?.hy_oas?.value || '—', date: data?.macro?.hy_oas?.date || '—', source: 'ICE BofA (FRED)', status: '✅' },
-    { indicator: 'RRP 余额', value: data?.fed?.rrp?.value ? `$${(+data.fed.rrp.value/1e9).toFixed(0)}B` : '—', date: data?.fed?.rrp?.date || '—', source: 'Fed H.4.1', status: '✅' },
-    { indicator: 'TGA 余额', value: data?.fed?.tga?.value ? `$${(+data.fed.tga.value/1e9).toFixed(0)}B` : '—', date: data?.fed?.tga?.date || '—', source: 'Fed H.4.1', status: '✅' },
-    { indicator: '银行准备金', value: data?.fed?.reserves?.value ? `$${(+data.fed.reserves.value/1e9).toFixed(0)}B` : '—', date: data?.fed?.reserves?.date || '—', source: 'Fed H.4.1', status: '✅' },
+    { indicator: 'RRP 余额', value: data?.fed?.rrp?.value ? `$${fmt(data.fed.rrp.value, 1)}B` : '—', date: data?.fed?.rrp?.date || '—', source: 'Fed H.4.1', status: '✅' },
+    { indicator: 'TGA 余额', value: data?.fed?.tga?.value ? `$${fmt(data.fed.tga.value, 0)}B` : '—', date: data?.fed?.tga?.date || '—', source: 'Fed H.4.1', status: '✅' },
+    { indicator: '银行准备金', value: data?.fed?.reserves?.value ? `$${fmt(data.fed.reserves.value, 0)}B` : '—', date: data?.fed?.reserves?.date || '—', source: 'Fed H.4.1', status: '✅' },
   ];
 
   let html = '<table><thead><tr><th>指标</th><th>数值</th><th>数据截至</th><th>来源</th><th>状态</th></tr></thead><tbody>';
