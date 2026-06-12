@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 1.5rem 0;
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 1rem;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.header-inner h1 { font-size: 1.4rem; }
+.subtitle { color: #8899b4; font-size: 0.85rem; }
+.badge {
+  margin-left: auto; padding: 0.25rem 0.75rem; border-radius: 20px;
+  background: #2d4a7a; font-size: 0.8rem;
+}
+
+main { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
+section {
+  background: white; border-radius: 12px; padding: 1.5rem;
+  margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+section h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #1a1a2e; border-left: 4px solid #2563eb; padding-left: 0.75rem; }
+.section-meta { font-size: 0.8rem; color: #666; margin-bottom: 1rem; }
+.loading { color: #999; font-style: italic; padding: 2rem; text-align: center; }
+
+/* Card grid */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
+.indicator-card {
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;
+  padding: 0.75rem 1rem; transition: all 0.2s;
+}
+.indicator-card:hover { border-color: #2563eb; box-shadow: 0 2px 8px rgba(37,99,235,0.1); }
+.indicator-card .label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+.indicator-card .value { font-size: 1.4rem; font-weight: 700; margin: 0.25rem 0; }
+.indicator-card .change { font-size: 0.8rem; }
+.indicator-card .source { font-size: 0.7rem; color: #94a3b8; margin-top: 0.25rem; }
+.up { color: #16a34a; } .down { color: #dc2626; } .neutral { color: #ca8a04; }
+.up-bg { background: #f0fdf4; } .down-bg { background: #fef2f2; } .neutral-bg { background: #fefce8; }
+
+/* 判断台 */
+#judgment-content { padding: 0.5rem 0; }
+.judgment-thesis {
+  font-size: 1rem; font-weight: 600; color: #1a1a2e; margin-bottom: 1rem;
+  padding: 0.75rem 1rem; background: #f0f7ff; border-radius: 8px; border-left: 4px solid #2563eb;
+}
+.judgment-evidence { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.falsify-box {
+  background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 0.75rem; font-size: 0.85rem;
+}
+.falsify-box .title { font-weight: 600; color: #dc2626; margin-bottom: 0.25rem; }
+.confirm-box {
+  background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.75rem; font-size: 0.85rem;
+}
+.confirm-box .title { font-weight: 600; color: #16a34a; margin-bottom: 0.25rem; }
+
+/* 信号表 */
+#signal-table table, #sources-table table {
+  width: 100%; border-collapse: collapse; font-size: 0.85rem;
+}
+#signal-table th, #sources-table th {
+  text-align: left; padding: 0.5rem; background: #f1f5f9; font-weight: 600; border-bottom: 2px solid #e2e8f0;
+}
+#signal-table td, #sources-table td {
+  padding: 0.5rem; border-bottom: 1px solid #f1f5f9;
+}
+#signal-table tr:hover, #sources-table tr:hover { background: #f8fafc; }
+
+footer { text-align: center; padding: 2rem; color: #94a3b8; font-size: 0.8rem; }
+footer .disclaimer { color: #cbd5e1; margin-top: 0.5rem; }
+
+/* 深度报告链接 */
+.report-link { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; }
+.report-link:hover { background: #1d4ed8; }
+
+@media (max-width: 768px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .judgment-evidence { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日宏观研判 · US Macro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>📊 每日宏观研判</h1>
+    <span class="subtitle">US Macro · 美国宏观监测平台</span>
+    <span class="badge" id="badge-date">加载中...</span>
+  </div>
+</header>
+
+<main>
+  <!-- 核心判断台 -->
+  <section id="judgment">
+    <h2>🎯 今日判断台</h2>
+    <div id="judgment-content">
+      <div class="loading">加载数据中...</div>
+    </div>
+  </section>
+
+  <!-- 核心指标 -->
+  <section id="dashboard">
+    <h2>📌 核心资产</h2>
+    <p class="section-meta" id="market-date">数据截至: 加载中...</p>
+    <div class="card-grid" id="indicator-grid">
+      <div class="loading">加载数据中...</div>
+    </div>
+  </section>
+
+  <!-- 流动性监测 -->
+  <section id="liquidity">
+    <h2>💧 美元流动性</h2>
+    <div class="card-grid" id="liquidity-grid">
+      <div class="loading">加载数据中...</div>
+    </div>
+  </section>
+
+  <!-- 美债收益率曲线 -->
+  <section id="yields">
+    <h2>📈 收益率曲线</h2>
+    <div class="card-grid" id="yield-grid">
+      <div class="loading">加载数据中...</div>
+    </div>
+  </section>
+
+  <!-- 证伪信号表 -->
+  <section id="signals">
+    <h2>🔍 跨资产确认链</h2>
+    <div id="signal-table">
+      <div class="loading">加载数据中...</div>
+    </div>
+  </section>
+
+  <!-- 数据来源 -->
+  <section id="sources">
+    <h2>📚 数据口径与可信度</h2>
+    <div id="sources-table">
+      <div class="loading">加载数据中...</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>数据来源: Yahoo Finance · FRED · U.S. Treasury · Fed H.4.1 · Cboe</p>
+  <p>生成时间: <span id="gen-time">-</span> · 每日更新</p>
+  <p class="disclaimer">仅供参考，不构成投资建议</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

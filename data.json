@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-06-12T10:00:00+08:00",
+  "market_date": "2026-06-11",
+  "indices": {
+    "sp500": { "label": "sp500", "price": "7394.30", "change_pct": "+1.75%" },
+    "dow": { "label": "dow", "price": "50848.75", "change_pct": "+1.86%" },
+    "nasdaq": { "label": "nasdaq", "price": "25809.66", "change_pct": "+2.54%" },
+    "vix": { "label": "vix", "price": "19.44", "change_pct": "-12.51%" },
+    "tnx": { "label": "tnx", "price": "4.45", "change_pct": "-2.0bp" },
+    "dxy": { "label": "dxy", "price": "99.83", "change_pct": "-0.03%" }
+  },
+  "commodities": {
+    "wti": { "label": "wti", "price": "86.79", "change_pct": "-2.06%" },
+    "gold": { "label": "gold", "price": "4235.40", "change_pct": "+2.95%" },
+    "btc": { "label": "btc", "price": "63616", "change_pct": "+3.53%" }
+  },
+  "macro": {
+    "hy_oas": { "value": "2.80", "date": "2026-06-10" },
+    "vixcls": { "value": "19.44", "date": "2026-06-11" },
+    "sofr": { "value": "4.40", "date": "2026-06-11" },
+    "iorb": { "value": "4.45", "date": "2026-06-11" }
+  },
+  "fed": {
+    "rrp": { "value": "0.46", "date": "2026-06-11" },
+    "tga": { "value": "828.1", "date": "2026-06-11" },
+    "reserves": { "value": "3300", "date": "2026-06-11" }
+  },
+  "yields": {
+    "Date": "2026-06-11",
+    "1 Mo": "4.30",
+    "3 Mo": "4.32",
+    "1 Yr": "4.10",
+    "2 Yr": "3.98",
+    "3 Yr": "4.05",
+    "5 Yr": "4.18",
+    "7 Yr": "4.30",
+    "10 Yr": "4.45",
+    "20 Yr": "4.65",
+    "30 Yr": "4.72"
+  }
+}
